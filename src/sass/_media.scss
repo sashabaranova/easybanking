@@ -1,0 +1,16 @@
+// MEDIA QUERIES
+
+@media screen and (min-width: $breakpointLargeScreen) {
+  .main {
+    padding: 4rem;
+    margin: 0 auto !important;
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: $breakpointMobile) {
+  .trafficImage {
+    height: 35rem;
+    padding: 1rem 3rem;
+  }
+}

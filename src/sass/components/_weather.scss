@@ -1,0 +1,18 @@
+.weatherGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  padding: 5rem 1rem !important;
+
+  div {
+    text-align: center;
+    width: 100%;
+  }
+
+  .weatherIcon {
+    color: $icon;
+    font-size: 10rem;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,55 @@
+@import '../../sass/index.scss';
+
+.transactionContainer {
+  width: 80%;
+  padding: 2rem;
+  background: $white;
+  text-align: left;
+
+  width: 80%;
+}
+
+.transaction {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.transactionInfo {
+  width: 70%;
+
+  &__desc,
+  &__time {
+    display: inline-block;
+    width: 100%;
+  }
+
+  &__desc {
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__time {
+    font-size: 1.3rem;
+  }
+}
+
+.transactionDetails {
+  width: 30%;
+
+  &__amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
+  }
+
+  &__amount_plus,
+  &__currency_plus {
+    color: $green;
+  }
+
+  &__currency {
+    font-size: 2rem;
+  }
+}

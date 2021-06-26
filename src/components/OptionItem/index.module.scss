@@ -1,0 +1,28 @@
+@import '../../sass/index.scss';
+
+.optionContainer {
+  cursor: pointer;
+  padding: 1rem;
+  width: 50%;
+
+  &__iternal {
+    background-color: $yellow;
+    border-radius: 3px;
+    // display: flex;
+    // flex-wrap: nowrap;
+    // justify-content: center;
+    padding: 2rem;
+    text-align: center;
+
+    &:hover {
+      background-color: $darkYellow;
+    }
+  }
+
+  &__name,
+  &__icon {
+    display: inline-block;
+  }
+
+
+}

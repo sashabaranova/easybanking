@@ -1,0 +1,45 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $white;
+  color: $colorFont;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+
+.App {
+  font-family: inherit;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+button {
+  font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  padding: 2rem 5rem;
+}

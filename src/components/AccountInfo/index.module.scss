@@ -1,0 +1,18 @@
+@import '../../sass/index.scss';
+
+.infoContainer {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.customBtn {
+  width: 80%;
+  background-color: $colorHover;
+  border-color: $colorHover;
+  margin-bottom: 5rem;
+
+  &:hover {
+    background-color: $colorHoverTwo;
+    border-color: $colorHoverTwo;
+  }
+}

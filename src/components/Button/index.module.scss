@@ -1,0 +1,33 @@
+@import '../../sass/index.scss';
+
+.btn {
+  box-sizing: border-box;
+  color: $colorFont;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: relative;
+  transition-property: background-color,border-color,box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+  border: 1px solid $yellow;
+  border-radius: 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: $yellow;
+  padding: 1rem 2rem;
+  min-width: 10rem;
+
+  &:hover {
+    border-color: $darkYellow;
+    background-color: $darkYellow;
+  }
+
+  &_gray {
+    border-color: $colorBorder;
+    background-color: $colorBorder;
+  }
+
+  &_gray:hover {
+    border-color: $colorElement;
+    background-color: $colorElement;
+  }
+}

@@ -1,0 +1,57 @@
+@import '../../sass/index.scss';
+
+.accountContainer {
+  width: 100%;
+  border-top: 1px $colorBorder solid;
+  border-radius: 1px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all ease 0.2s;
+
+  &_wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  &__currency {
+    width: 20%;
+    span {
+      display: flex;
+      width: 4.5rem;
+      height: 4.5rem;
+      padding: 1rem;
+      color: $white;
+      background-color: $background;
+      border-radius: 50%;
+      color: $colorElement;
+      font-weight: 700;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 3px 6px rgba(#333, 0.12),  0px -2px 4px rgba(#333, 0.08);
+    }
+  }
+
+  &__info {
+    text-align: left;
+
+    &__balance {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    &__name,
+    &__balance {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  &:last-of-type {
+    border-bottom: 1px $colorBorder solid;
+  }
+
+  &:hover {
+    background-color: $colorHover;
+  }
+}

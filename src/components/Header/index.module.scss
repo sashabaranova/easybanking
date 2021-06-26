@@ -1,0 +1,57 @@
+@import '../../sass/index.scss';
+
+header {
+  background-color: $allWhite;
+  padding: 1rem;
+
+  .header__nav {
+    align-items: center;
+    display: flex;
+    padding: 0;
+  }
+
+  .header__heading {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 0 2rem;
+  }
+
+  .header__separator {
+    background-color: $colorFont;
+    height: 2.5rem;
+    width: 1px;
+  }
+
+  .header__pages {
+    display: inline-block;
+    margin: 0;
+    margin-left: 2rem;
+    padding: 0;
+  }
+
+  .header__page {
+    cursor: pointer;
+    color: $colorElement;
+    display: inline-block;
+    font-size: 2rem;
+    margin-right: 3rem;
+
+    &:hover {
+      color: $colorElement;
+    }
+
+    &_link {
+      text-decoration: none;
+      color: $colorElement;
+    }
+
+    &_link:hover {
+      color: $colorElement;
+    }
+  }
+}
+
+.bold {
+  font-weight: 700;
+}

@@ -1,0 +1,17 @@
+.dateTime {
+  padding: 1rem !important;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .heading {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .dateTimeContainer {
+    width: 50%;
+  }
+}

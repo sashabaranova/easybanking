@@ -1,0 +1,13 @@
+.trafficImage {
+	height: 60vw;
+	margin: 0 auto;
+	max-width: 50rem;
+	padding: 1rem;
+	width: 100%;
+
+	.image {
+		height: 100%;
+		object-fit: fill;
+		width: 100%;
+	}
+}

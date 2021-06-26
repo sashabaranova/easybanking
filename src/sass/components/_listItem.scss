@@ -1,0 +1,9 @@
+.listItem {
+  cursor: pointer;
+}
+
+.hover {
+  &:hover {
+    background-color: rgba($black, .08);
+  }
+}

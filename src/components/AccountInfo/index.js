@@ -4,37 +4,41 @@ import useAccountInfoApi from '../../hooks/useAccountInfoApi';
 import useTransactionsApi from '../../hooks/useTransactionsApi';
 import Button from '../Button';
 import Transactions from '../Transactions';
-import styles from './index.module.scss'
+import styles from './index.module.scss';
 const AccountInfo = () => {
-  const { id } = useParams()
+  const { id } = useParams();
 
   const [{ accountInfo, isLoading }, fetchAccountInfo] = useAccountInfoApi();
   const [{ transactions, isLoading: isLoadingTransactions, lastId, paginationFinish }, fetchTransactions] = useTransactionsApi();
 
   useEffect(() => {
     if (id) {
-      fetchAccountInfo(id)
-      fetchTransactions(id)
+      fetchAccountInfo(id);
+      fetchTransactions(id);
     }
-  }, [id])
+  }, [id]);
 
   const onLoadMore = () => {
-    fetchTransactions(id, lastId)
-  }
+    fetchTransactions(id, lastId);
+  };
 
   const { name } = accountInfo;
 
-  return isLoading && isLoadingTransactions ? <h2>Loading....</h2> : (
-    <div className={styles.infoContainer}>
-      <h2>Account: {name}</h2>
-      {transactions.length ? <Transactions transactions={transactions} /> :
-        <p>You don't have any transactions with this account.</p>
-      }
-      {!!transactions.length && !paginationFinish &&
-        <Button onPressBtn={onLoadMore} name="Load More" className={styles.customBtn} />
-      }
+  return (
+    <div className={styles.infoContainer} data-testid="account_info">
+      {isLoading && isLoadingTransactions ? <h2>Loading....</h2> : (
+        <>
+          <h2>Account: {name}</h2>
+          {transactions.length ? <Transactions transactions={transactions} /> :
+            <p>You don't have any transactions with this account.</p>
+          }
+          {!!transactions.length && !paginationFinish &&
+            <Button onPressBtn={onLoadMore} name="Load More" btnClassName={styles.customBtn} />
+          }
+        </>
+      )}
     </div>
-  )
+  );
 };
 
 export default AccountInfo;

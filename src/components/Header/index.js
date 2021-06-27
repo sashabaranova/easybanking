@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.header__nav}>
-        <div className={styles.header__heading} onClick={navigateHome}>
+        <div className={styles.header__heading} data-testid="nav_heading" onClick={navigateHome}>
           Easy
             <span className={styles.bold}>Banking</span>
         </div>

@@ -7,10 +7,11 @@ const useCreateTransactionApi = () => {
     isLoading: false,
     hasError: false,
     errorMessage: '',
+    successMessage: '',
   })
 
   const createTransaction = async (accountFrom, accountTo, amount, description, currency = 'USD') => {
-    dispatch({ type: 'CREATE_TRANSACTION' });
+    (dispatch({ type: 'CREATE_TRANSACTION' }))
 
     try {
       const data = {
@@ -30,13 +31,16 @@ const useCreateTransactionApi = () => {
           type: 'CREATE_TRANSACTION_FAILURE',
           errorMessage: message,
         });
+        return;
       }
       if (response.status === 201) {
+        const { message } = response.data;
         dispatch({
           type: 'CREATE_TRANSACTION_SUCCESS',
+          successMessage: message
         });
       } else {
-        const { message } =  response;
+        const { message } = response;
         dispatch({
           type: 'CREATE_TRANSACTION_FAILURE',
           errorMessage: message,
@@ -50,7 +54,9 @@ const useCreateTransactionApi = () => {
     }
   }
 
-  return [state, createTransaction];
+  const clearTransaction = () => dispatch({ type: 'CLEAR_TRANSACTION' });
+
+  return [state, createTransaction, clearTransaction];
 }
 
 export default useCreateTransactionApi;

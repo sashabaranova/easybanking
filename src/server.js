@@ -109,7 +109,7 @@ export function makeServer({ environment = 'test' } = {}) {
           schema.db.transactions.insert({ id: id + 1, action: 'credit', desc: description, amount: - amount, currency, accountId: parseInt(accountFrom), timestamp });
           schema.db.transactions.insert({ id: id + 2, action: 'debit', desc: description, amount, currency, accountId: parseInt(accountTo), timestamp });
 
-          return { httpStatus: 400, message: 'Transaction successful.' };
+          return { httpStatus: 201, message: 'Transaction successful.' };
         }
       })
     },

@@ -1,7 +1,6 @@
 import { useReducer } from 'react';
 import axios from 'axios';
 import accountsReducer from '../reducers/accountsReducer';
-// const API_ENDPOINT = 'https://api.data.gov.sg/v1/transport/traffic-images';
 
 const useAccountsApi = () => {
   const [state, dispatch] = useReducer(accountsReducer, {

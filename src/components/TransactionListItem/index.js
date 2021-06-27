@@ -1,12 +1,12 @@
 import React from 'react';
 import format from 'date-fns/format'
 import classNames from 'classnames';
-import styles from './index.module.scss'
+import styles from './index.module.scss';
 
-const TransactionListItem = ({ desc, timestamp, amount, currency }) => {
-  const date = new Date(timestamp)
+const TransactionListItem = ({ desc, timestamp, amount = 0, currency }) => {
+  const date = new Date(timestamp);
   return (
-    <li className={styles.transactionContainer}>
+    <li className={styles.transactionContainer} data-testid="transaction">
       <div className={styles.transaction}>
         <div className={styles.transactionInfo}>
           <span className={styles.transactionInfo__desc}>{desc}</span>
@@ -18,7 +18,7 @@ const TransactionListItem = ({ desc, timestamp, amount, currency }) => {
         </div>
       </div>
     </li>
-  )
-}
+  );
+};
 
 export default TransactionListItem;

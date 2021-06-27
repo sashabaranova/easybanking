@@ -7,6 +7,6 @@ const OptionItem = ({ name, onOptionClick = () => {} }) => (
       <span className={styles.optionContainer__name}>{name}</span>
     </div>
   </div>
-)
+);
 
 export default OptionItem;

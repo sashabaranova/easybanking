@@ -11,11 +11,11 @@
 
 .transaction {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .transactionInfo {
-  width: 70%;
+  width: 100%;
 
   &__desc,
   &__time {
@@ -51,5 +51,11 @@
 
   &__currency {
     font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: $breakpointMobile) {
+  .transaction {
+    flex-wrap: nowrap;
   }
 }

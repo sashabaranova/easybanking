@@ -16,3 +16,10 @@
     border-color: $colorHoverTwo;
   }
 }
+
+@media screen and (min-width: $breakpointDesktop) {
+  .infoContainer {
+    margin: 0 auto;
+    width: 90rem;
+  }
+}

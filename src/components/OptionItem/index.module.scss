@@ -3,14 +3,11 @@
 .optionContainer {
   cursor: pointer;
   padding: 1rem;
-  width: 50%;
+  width: 100%;
 
   &__iternal {
     background-color: $yellow;
     border-radius: 3px;
-    // display: flex;
-    // flex-wrap: nowrap;
-    // justify-content: center;
     padding: 2rem;
     text-align: center;
 
@@ -23,6 +20,10 @@
   &__icon {
     display: inline-block;
   }
+}
 
-
+@media screen and (min-width: $breakpointMobile) {
+  .optionContainer {
+    width: 50%;
+  }
 }
